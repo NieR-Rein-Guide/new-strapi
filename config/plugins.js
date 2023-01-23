@@ -23,10 +23,5 @@ module.exports = ({ env }) => ({
         },
       }
     },
-    graphql: {
-      config: {
-        defaultLimit: 9999,
-        maxLimit: 9999,
-      }
-    }
+    ckeditor: true
   });
