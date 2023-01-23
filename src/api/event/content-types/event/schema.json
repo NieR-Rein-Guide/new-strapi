@@ -2,13 +2,15 @@
   "kind": "collectionType",
   "collectionName": "events",
   "info": {
-    "name": "Events",
+    "singularName": "event",
+    "pluralName": "events",
+    "displayName": "Event",
     "description": ""
   },
   "options": {
+    "draftAndPublish": true,
     "increments": true,
-    "timestamps": true,
-    "draftAndPublish": false
+    "timestamps": true
   },
   "pluginOptions": {
     "i18n": {
@@ -49,32 +51,6 @@
       },
       "type": "datetime"
     },
-    "image": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": false,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "poll": {
-      "type": "component",
-      "repeatable": false,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "poll.poll"
-    },
     "slug": {
       "pluginOptions": {
         "i18n": {
@@ -109,6 +85,19 @@
       },
       "type": "integer",
       "default": 0
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
     }
   }
 }
