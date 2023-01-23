@@ -2,7 +2,9 @@
   "kind": "collectionType",
   "collectionName": "lores",
   "info": {
-    "name": "Lore",
+    "singularName": "lore",
+    "pluralName": "lores",
+    "displayName": "Lore",
     "description": ""
   },
   "options": {
@@ -37,22 +39,6 @@
       },
       "type": "string"
     },
-    "cover": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": false,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "content": {
       "pluginOptions": {
         "i18n": {
@@ -84,6 +70,19 @@
         }
       },
       "type": "string"
+    },
+    "cover": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
     }
   }
 }
