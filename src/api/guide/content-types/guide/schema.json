@@ -2,7 +2,9 @@
   "kind": "collectionType",
   "collectionName": "guides",
   "info": {
-    "name": "Guide",
+    "singularName": "guide",
+    "pluralName": "guides",
+    "displayName": "Guide",
     "description": ""
   },
   "options": {
@@ -43,15 +45,12 @@
       "unique": true
     },
     "cover": {
-      "model": "file",
-      "via": "related",
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
-        "images",
-        "files",
-        "videos"
+        "images"
       ],
-      "plugin": "upload",
-      "required": false,
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -75,15 +74,11 @@
       "type": "text"
     },
     "thumbnail": {
-      "model": "file",
-      "via": "related",
       "allowedTypes": [
-        "files",
-        "images",
-        "videos"
+        "images"
       ],
-      "plugin": "upload",
-      "required": false,
+      "type": "media",
+      "multiple": false,
       "pluginOptions": {
         "i18n": {
           "localized": true
