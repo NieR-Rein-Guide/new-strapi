@@ -5,17 +5,21 @@ module.exports = ({ env }) => ({
       },
     },
     upload: {
-      config: {
-        provider: 'cloudinary',
-        providerOptions: {
-          cloud_name: env('CLOUDINARY_NAME'),
-          api_key: env('CLOUDINARY_KEY'),
-          api_secret: env('CLOUDINARY_SECRET'),
-        },
-        actionOptions: {
-          upload: {},
-          delete: {},
+      provider: 'aws-s3',
+      providerOptions: {
+        accessKeyId: env('S3_ACCESS_KEY'),
+        secretAccessKey: env('S3_SECRET_KEY'),
+        region: env('REGION'),
+        endpoint: `s3.${env('REGION')}.${env('S3_DOMAIN')}`,
+        params: {
+          Bucket: env('S3_BUCKET_NAME'),
         },
       },
     },
+    graphql: {
+      config: {
+        defaultLimit: 999,
+        maxLimit: 9999,
+      }
+    }
   });
