@@ -103,9 +103,9 @@
     },
     "guides": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToMany",
       "target": "api::guide.guide",
-      "mappedBy": "event"
+      "mappedBy": "events"
     }
   }
 }
