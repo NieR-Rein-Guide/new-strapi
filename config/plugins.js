@@ -23,6 +23,6 @@ module.exports = ({ env }) => ({
         },
       }
     },
-    ckeditor: false,
+    ckeditor: true,
     'duplicate-button': true
   });
