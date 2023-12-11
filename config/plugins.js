@@ -23,6 +23,9 @@ module.exports = ({ env }) => ({
         },
       }
     },
-    ckeditor: true,
+    ckeditor: {
+      enabled: true,
+      resolve: "./src/plugins/strapi-plugin-ckeditor"
+    },
     'duplicate-button': true
   });
